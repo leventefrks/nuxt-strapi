@@ -1,0 +1,13 @@
+query Menus {
+  menus {
+    id
+    mealName
+    path
+    ingredients
+    glutenFree
+    price
+    image {
+      url
+    }
+  }
+}

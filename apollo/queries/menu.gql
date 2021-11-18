@@ -1,0 +1,9 @@
+query Menu($id: ID!) {
+  menu(id: $id) {
+    id
+    mealName
+    ingredients
+    glutenFree
+    price
+  }
+}
