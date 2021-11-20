@@ -60,14 +60,14 @@ export default {
   async asyncData({ app, params }) {
     const client = app.apolloProvider.defaultClient
 
-    const res = await client.query({
+    const result = await client.query({
       query: Menu,
       variables: {
         id: params.slug,
       },
     })
 
-    const { menu } = res.data
+    const { menu } = result.data
     return {
       menu,
     }

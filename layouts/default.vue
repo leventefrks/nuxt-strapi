@@ -1,6 +1,5 @@
 <template>
   <section class="min-w-screen min-h-screen py-6 bg-gray-100 dark:bg-gray-800">
-    <app-title />
     <main-wrapper>
       <transition
         enter-active-class="duration-500 ease"
@@ -14,13 +13,11 @@
 </template>
 
 <script>
-import AppTitle from '@/components/AppTitle'
 import MainWrapper from '@/components/MainWrapper'
 
 export default {
   components: {
     MainWrapper,
-    AppTitle,
   },
 }
 </script>

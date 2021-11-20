@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="relative w-full flex flex-col">
+    <page-title>Nuxt.js & Strapi</page-title>
     <aside
       class="
         absolute
@@ -167,6 +168,7 @@ import {
   MenuIcon,
   XIcon,
 } from 'vue-feather-icons'
+import PageTitle from '@/components/PageTitle'
 import Card from '@/components/Card'
 import List from '@/components/List'
 import Menus from '@/apollo/queries/menus'
@@ -177,6 +179,7 @@ export default {
     TrendingDownIcon,
     TrendingUpIcon,
     SearchIcon,
+    PageTitle,
     MenuIcon,
     XIcon,
     Card,

@@ -6,8 +6,9 @@
       font-thin
       text-2xl
       md:text-5xl
+      mb-8
     "
   >
-    Nuxt.js & Strapi
+    <slot />
   </h1>
 </template>
