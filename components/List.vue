@@ -20,8 +20,8 @@
         </thead>
         <tbody class="text-white text-sm">
           <tr
-            v-for="menu in menus"
-            :key="menu.id"
+            v-for="{ id, path, mealName, image, glutenFree } in menus"
+            :key="id"
             class="
               border-b
               text-gray-400
@@ -35,23 +35,23 @@
                 <div class="mr-2">
                   <img
                     class="w-6 h-6 rounded-full"
-                    :src="`http://localhost:1337${menu.image.url}`"
+                    :src="`http://localhost:1337${image.url}`"
                   />
                 </div>
-                <span class="cursor-default">{{ menu.mealName }}</span>
+                <span class="cursor-default">{{ mealName }}</span>
               </div>
             </td>
             <td class="hidden md:flex p-2 text-center cursor-default">
-              <badge :is-gluten-free="menu.glutenFree" />
+              <badge :is-gluten-free="glutenFree" />
             </td>
             <td class="p-2 text-center">
               <nuxt-link
                 :to="{
                   name: 'slug',
                   params: {
-                    slug: menu.path,
+                    slug: path,
                   },
-                  query: { id: menu.id },
+                  query: { id },
                 }"
                 class="
                   inline-flex

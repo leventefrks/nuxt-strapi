@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="flex flex-wrap justify-center gap-6">
     <div
-      v-for="menu in menus"
-      :key="menu.id"
+      v-for="{ id, path, mealName, image } in menus"
+      :key="id"
       class="shadow-md transform hover:-translate-y-1 duration-200"
     >
       <div
@@ -24,8 +24,8 @@
         </button>
         <figure>
           <img
-            :src="`http://localhost:1337${menu.image.url}`"
-            :alt="menu.mealName"
+            :src="`http://localhost:1337${image.url}`"
+            :alt="mealName"
             class="w-full object-cover h-40"
           />
         </figure>
@@ -33,15 +33,15 @@
       <div class="bg-gray-50 dark:bg-gray-700 shadow-lg rounded-lg -mt-4 w-64">
         <div class="flex flex-col items-start p-5">
           <h2 class="font-bold text-gray-700 dark:text-gray-50 text-md">
-            {{ menu.mealName }}
+            {{ mealName }}
           </h2>
           <nuxt-link
             :to="{
               name: 'slug',
               params: {
-                slug: menu.path,
+                slug: path,
               },
-              query: { id: menu.id },
+              query: { id },
             }"
             class="
               inline-flex
