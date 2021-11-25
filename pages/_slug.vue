@@ -27,12 +27,7 @@
         </h3>
         <div class="dark:text-gray-50">{{ menu.ingredients }}</div>
         <div class="flex items-center justify-between">
-          <span v-if="menu.glutenFree" class="text-sm text-green-500 font-light"
-            >Gluten Free</span
-          >
-          <span v-else class="text-sm text-red-400 font-light">
-            Consists Gluten</span
-          >
+          <badge :is-gluten-free="glutenFree" />
           <div class="text-2xl text-red-600 font-bold">$ {{ menu.price }}</div>
         </div>
         <nuxt-link
@@ -57,11 +52,13 @@
 
 <script>
 import { ChevronLeftIcon } from 'vue-feather-icons'
+import Badge from '@/components/Badge'
 import GetMenu from '@/apollo/queries/menu'
 
 export default {
   components: {
     ChevronLeftIcon,
+    Badge,
   },
 
   async asyncData({ app, params, query }) {
