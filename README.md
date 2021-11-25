@@ -21,4 +21,4 @@ For detailed explanation on how things work, check out the [documentation](https
 
 ## Special Directories
 
-Nuxt.js, Strapi, GraphQL & TailwindCSS
+Nuxt.js, Strapi, GraphQL, VueApollo & TailwindCSS
