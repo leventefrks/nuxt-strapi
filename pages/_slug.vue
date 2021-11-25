@@ -57,24 +57,24 @@
 
 <script>
 import { ChevronLeftIcon } from 'vue-feather-icons'
-import Menu from '@/apollo/queries/menu'
+import GetMenu from '@/apollo/queries/menu'
 
 export default {
   components: {
     ChevronLeftIcon,
   },
 
-  async asyncData({ app, params }) {
+  async asyncData({ app, params, query }) {
     const client = app.apolloProvider.defaultClient
 
     const result = await client.query({
-      query: Menu,
+      query: GetMenu,
       variables: {
-        path: params.slug,
+        id: query.id,
       },
     })
 
-    const menu = result.data.menus[0]
+    const menu = result.data.menu
     return {
       menu,
     }

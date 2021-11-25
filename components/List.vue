@@ -51,6 +51,7 @@
                   params: {
                     slug: menu.path,
                   },
+                  query: { id: menu.id },
                 }"
                 class="
                   inline-flex

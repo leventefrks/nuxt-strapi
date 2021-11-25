@@ -1,4 +1,4 @@
-query Menus {
+query GetMenus {
   menus {
     id
     mealName

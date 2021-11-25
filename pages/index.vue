@@ -171,7 +171,7 @@ import {
 import PageTitle from '@/components/PageTitle'
 import Card from '@/components/Card'
 import List from '@/components/List'
-import Menus from '@/apollo/queries/menus'
+import GetMenus from '@/apollo/queries/menus'
 
 export default {
   components: {
@@ -193,11 +193,11 @@ export default {
   async asyncData({ app, params }) {
     const client = app.apolloProvider.defaultClient
 
-    const res = await client.query({
-      query: Menus,
+    const result = await client.query({
+      query: GetMenus,
     })
 
-    const { menus } = res.data
+    const { menus } = result.data
     return {
       menus,
     }

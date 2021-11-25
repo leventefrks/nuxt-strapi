@@ -1,10 +1,10 @@
-query Menu($path: String!) {
-  menus(where: { path: $path }) {
+query GetMenu($id: ID!) {
+  menu(id: $id) {
+    id
     mealName
     path
-    ingredients
     glutenFree
-    price
+    ingredients
     image {
       url
     }
