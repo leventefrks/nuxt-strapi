@@ -26,7 +26,6 @@
           <img
             :src="`http://localhost:1337${menu.image.url}`"
             :alt="menu.mealName"
-            quality="20"
             class="w-full object-cover h-40"
           />
         </figure>
@@ -37,7 +36,12 @@
             {{ menu.mealName }}
           </h2>
           <nuxt-link
-            :to="{ name: 'slug', params: { slug: menu.path, id: menu.id } }"
+            :to="{
+              name: 'slug',
+              params: {
+                slug: menu.path,
+              },
+            }"
             class="
               inline-flex
               items-center

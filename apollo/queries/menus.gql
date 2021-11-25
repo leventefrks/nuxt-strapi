@@ -3,9 +3,7 @@ query Menus {
     id
     mealName
     path
-    ingredients
     glutenFree
-    price
     image {
       url
     }

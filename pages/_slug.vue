@@ -12,9 +12,16 @@
       "
     >
       <div class="p-5">
-        <h2 class="font-bold text-gray-500 dark:text-gray-50 text-3xl">
+        <h2 class="mb-4 font-bold text-gray-500 dark:text-gray-50 text-3xl">
           {{ menu.mealName }}
         </h2>
+        <figure>
+          <img
+            :src="`http://localhost:1337${menu.image.url}`"
+            :alt="menu.mealName"
+            class="w-full object-cover h-72"
+          />
+        </figure>
         <h3 class="font-bold text-gray-500 dark:text-gray-50 text-md">
           Ingredients
         </h3>
@@ -63,11 +70,11 @@ export default {
     const result = await client.query({
       query: Menu,
       variables: {
-        id: params.id,
+        path: params.slug,
       },
     })
 
-    const { menu } = result.data
+    const menu = result.data.menus[0]
     return {
       menu,
     }

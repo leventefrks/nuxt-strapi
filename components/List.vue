@@ -46,7 +46,12 @@
             </td>
             <td class="p-2 text-center">
               <nuxt-link
-                :to="menu.id"
+                :to="{
+                  name: 'slug',
+                  params: {
+                    slug: menu.path,
+                  },
+                }"
                 class="
                   inline-flex
                   items-center
