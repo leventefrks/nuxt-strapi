@@ -63,7 +63,7 @@ export default {
     const result = await client.query({
       query: Menu,
       variables: {
-        id: params.slug,
+        id: params.id,
       },
     })
 

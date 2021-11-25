@@ -37,7 +37,7 @@
             {{ menu.mealName }}
           </h2>
           <nuxt-link
-            :to="menu.id"
+            :to="{ name: 'slug', params: { slug: menu.path, id: menu.id } }"
             class="
               inline-flex
               items-center
