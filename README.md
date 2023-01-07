@@ -1,4 +1,14 @@
-# strux
+# Nuxt + Strapi = Recipe application
+
+A simple recipe application
+
+## Tech stack
+
+- Nuxt.js
+- Strapi
+- GraphQL
+- VueApollo
+- TailwindCSS
 
 ## Build Setup
 
@@ -18,9 +28,3 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Recipe application
-
-## Technologies
-
-Nuxt.js, Strapi, GraphQL, VueApollo & TailwindCSS
